@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The TNTDPC CII CTO Forum Member Directory 2026-27, connecting members with their professional profiles.">
+  <meta name="theme-color" content="#101820">
+  <title>TNTDPC CII CTO Forum · Member Directory 2026-27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101820'/%3E%3Ccircle cx='22' cy='32' r='9' fill='none' stroke='%2358b9de' stroke-width='5'/%3E%3Ccircle cx='42' cy='32' r='9' fill='none' stroke='%23d1a537' stroke-width='5'/%3E%3Cpath d='M29 32h6' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #101820;
+      --muted: #5e6872;
+      --line: #eceDEE;
+      --soft: #f6f8f9;
+      --blue: #2d88b5;
+      --blue-soft: #eaf5fa;
+      --gold: #a77b14;
+      --gold-soft: #fbf5e5;
+      --white: #fff;
+      --shadow: 0 18px 55px rgba(16, 24, 32, .08);
+      --font: Comfortaa, "Arial Rounded MT Bold", "Trebuchet MS", ui-rounded, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: var(--font); font-size: 16px; line-height: 1.55; }
+    button, input { font: inherit; }
+    a { color: inherit; }
+    .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .7rem 1rem; background: var(--ink); color: white; border-radius: 6px; }
+    .skip-link:focus { top: 1rem; }
+    .shell { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+    header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); backdrop-filter: blur(18px); }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font-family: var(--font); font-weight: 700; letter-spacing: .01em; }
+    .brand-mark { display: inline-flex; align-items: center; gap: .15rem; }
+    .brand-mark i { width: .72rem; height: .72rem; border: 2px solid var(--blue); border-radius: 50%; display: block; }
+    .brand-mark i:last-child { border-color: var(--gold); }
+    .nav-actions { display: flex; gap: .55rem; align-items: center; }
+    .button, .ghost { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: .45rem; padding: .65rem 1rem; border-radius: 7px; text-decoration: none; font-weight: 700; border: 1px solid var(--ink); cursor: pointer; }
+    .button { background: var(--ink); color: white; }
+    .button:hover { background: #25313a; }
+    .ghost { background: white; color: var(--ink); border-color: var(--line); }
+    .ghost:hover { border-color: #cbd1d5; background: var(--soft); }
+    .hero { border-bottom: 1px solid var(--line); background: radial-gradient(circle at 12% 10%, rgba(88,185,222,.12), transparent 28%), radial-gradient(circle at 92% 30%, rgba(209,165,55,.10), transparent 26%), #fbfcfa; }
+    .hero-inner { min-height: 380px; padding: 5rem 0 4.5rem; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 4rem; align-items: end; }
+    .eyebrow { margin: 0 0 .8rem; color: var(--blue); font-size: .8rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: var(--font); }
+    h1 { max-width: 780px; margin: 0; font-size: clamp(2.75rem, 6vw, 5rem); line-height: .99; letter-spacing: -.045em; font-weight: 500; }
+    .intro { max-width: 720px; margin: 1.8rem 0 0; color: #3f4951; font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+    .hero-note { border-left: 1px solid #dfe3e2; padding-left: 1.6rem; color: var(--muted); }
+    .hero-note strong { display: block; margin-bottom: .8rem; color: var(--ink); font-size: 1.05rem; }
+    .hero-note span { display: block; margin-top: .55rem; }
+    main { padding: 3.5rem 0 5rem; }
+    .directory-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px, 380px); gap: 2rem; align-items: end; }
+    h2 { margin: .15rem 0 0; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; }
+    .count { color: var(--muted); margin-top: .7rem; }
+    .search-wrap { position: relative; }
+    .search-wrap svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); }
+    #search { width: 100%; min-height: 52px; padding: .75rem 1rem .75rem 3rem; border: 1px solid #dfe3e5; border-radius: 8px; background: white; color: var(--ink); outline: none; }
+    #search:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(45,136,181,.11); }
+    .alpha { display: flex; flex-wrap: wrap; gap: .35rem; margin: 2rem 0 2.5rem; padding: .6rem; border: 1px solid var(--line); border-radius: 9px; background: var(--soft); }
+    .alpha button { width: 38px; height: 38px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer; font-weight: 800; }
+    .alpha button:hover:not(:disabled), .alpha button[aria-pressed="true"] { background: var(--ink); color: white; }
+    .alpha button:disabled { opacity: .26; cursor: default; }
+    .alpha .all { width: auto; padding-inline: .8rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .card { --spot-x: 50%; --spot-y: 0%; --spot-rgb: 45, 136, 181; min-height: 380px; padding: 1.5rem; border: 1px solid rgba(16,24,32,.10); border-radius: 14px; background: radial-gradient(280px circle at var(--spot-x) var(--spot-y), rgba(var(--spot-rgb), .16), transparent 58%), rgba(255,255,255,.94); display: flex; flex-direction: column; position: relative; isolation: isolate; overflow: hidden; box-shadow: 0 1rem 2rem -1.4rem rgba(16,24,32,.32); backdrop-filter: blur(5px); transition: transform .18s ease, box-shadow .18s ease; }
+    .card:nth-child(4n+2), .card:nth-child(4n+3) { --spot-rgb: 167, 123, 20; }
+    .card::before { content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; padding: 1px; pointer-events: none; background: radial-gradient(220px circle at var(--spot-x) var(--spot-y), rgba(var(--spot-rgb), .95), transparent 60%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 1.4rem 3rem -1.4rem rgba(16,24,32,.34); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .avatar { width: 88px; height: 88px; flex: 0 0 auto; border-radius: 50%; display: grid; place-items: center; overflow: hidden; color: var(--ink); background: linear-gradient(135deg, var(--blue-soft), var(--gold-soft)); border: 3px solid rgba(255,255,255,.92); outline: 1px solid rgba(var(--spot-rgb), .42); box-shadow: 0 10px 25px rgba(16,24,32,.15), 0 0 24px rgba(var(--spot-rgb), .12); font-family: var(--font); font-weight: 700; letter-spacing: .03em; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .avatar-fallback { display: grid; place-items: center; width: 100%; height: 100%; }
+    .card h3 { margin: .25rem 0 0; font-size: 1.38rem; line-height: 1.2; letter-spacing: -.02em; font-weight: 650; }
+    .role { margin: 1.25rem 0 .2rem; color: var(--ink); font-weight: 700; line-height: 1.4; }
+    .company { margin: 0; color: var(--muted); }
+    .attributes { display: flex; flex-wrap: wrap; gap: .42rem; margin-top: 1rem; }
+    .attribute { display: inline-flex; align-items: center; min-height: 28px; padding: .25rem .62rem; border: 1px solid rgba(var(--spot-rgb), .28); border-radius: 999px; color: #35444e; background: rgba(var(--spot-rgb), .075); font-size: .76rem; font-weight: 750; line-height: 1.25; }
+    .linkedin { display: inline-flex; align-items: center; gap: .45rem; width: fit-content; margin-top: auto; padding-top: 1.35rem; color: var(--blue); font-weight: 800; text-decoration: none; }
+    .linkedin:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .empty { display: none; padding: 3rem 1rem; text-align: center; border: 1px dashed #ccd3d7; border-radius: 8px; color: var(--muted); }
+    .editorial-note { margin: 1.5rem 0 0; color: var(--muted); font-size: .88rem; }
+    .update { margin-top: 5rem; padding: 2rem; border-radius: 10px; color: white; background: linear-gradient(120deg, #101820, #20323e); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2rem; align-items: center; }
+    .update h2 { font-size: clamp(1.8rem, 3.5vw, 2.7rem); }
+    .update p { max-width: 680px; margin: .8rem 0 0; color: #d8e0e5; }
+    .update .eyebrow { color: #74c6e5; }
+    .update .button { background: white; color: var(--ink); border-color: white; white-space: nowrap; }
+    .update .button:hover { background: #edf3f6; }
+    .status { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; color: #f2d991; font-size: .9rem; }
+    .status::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: #e3b949; }
+    footer { border-top: 1px solid var(--line); padding: 2.2rem 0; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .footer-credit a { font-weight: 750; text-underline-offset: 3px; }
+    dialog { width: min(720px, calc(100% - 2rem)); border: 0; border-radius: 10px; padding: 0; box-shadow: 0 30px 90px rgba(0,0,0,.24); }
+    dialog::backdrop { background: rgba(16,24,32,.64); backdrop-filter: blur(4px); }
+    .dialog-body { padding: 2rem; }
+    .dialog-head { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; }
+    .dialog-head h2 { font-size: 2rem; }
+    .close { width: 42px; height: 42px; border-radius: 7px; border: 1px solid var(--line); background: white; cursor: pointer; font-size: 1.3rem; }
+    .email-instructions { margin: 1.3rem 0; padding: 1.2rem 1.2rem 1.2rem 2.5rem; border-radius: 8px; background: var(--gold-soft); border: 1px solid #ead9a8; color: #524115; }
+    .email-instructions li + li { margin-top: .35rem; }
+    .dialog-note { color: var(--muted); }
+    .noscript { margin: 1rem auto; padding: 1rem; width: min(1180px, calc(100% - 3rem)); background: #fff3cd; border: 1px solid #ead48a; }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-note { max-width: 520px; }
+      .directory-head { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 1.5rem, 1180px); }
+      .nav { min-height: 64px; }
+      .brand-sub { display: none; }
+      .nav-actions .ghost { display: none; }
+      .hero-inner { min-height: 0; padding: 3.5rem 0; }
+      h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
+      main { padding-top: 2.5rem; }
+      .grid { grid-template-columns: 1fr; }
+      .card { min-height: 350px; }
+      .update { grid-template-columns: 1fr; padding: 1.5rem; }
+      .update .button { width: 100%; }
+      .dialog-body { padding: 1.4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card { transition: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#directory">Skip to member directory</a>
+  <header>
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="TNTDPC CII CTO Forum member directory home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>TNTDPC CII CTO Forum <span class="brand-sub">· Member Directory 2026-27</span></span>
+      </a>
+      <nav class="nav-actions" aria-label="Primary">
+        <a class="ghost" href="#directory">Members</a>
+        <button class="button" type="button" data-open-update>Update profile</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="shell hero-inner">
+      <div>
+        <p class="eyebrow">TNTDPC CII CTO Forum</p>
+        <h1>Meet the people shaping the forum.</h1>
+        <p class="intro">An alphabetical directory of technology leaders, business builders, advisors and practitioners across the TNTDPC CII CTO Forum community.</p>
+      </div>
+      <div class="hero-note" aria-label="Directory principles">
+        <strong>Member directory</strong>
+        <span>Alphabetically indexed</span>
+        <span>Professionally focused</span>
+        <span>Connected through LinkedIn</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="shell" id="directory">
+    <div class="directory-head">
+      <div>
+        <p class="eyebrow">People</p>
+        <h2>Member Directory 2026-27</h2>
+        <div class="count" id="count" aria-live="polite"></div>
+      </div>
+      <label class="search-wrap">
+        <span class="skip-link">Search members</span>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="search" type="search" autocomplete="off" placeholder="Search name, role or organisation">
+      </label>
+    </div>
+
+    <nav class="alpha" id="alpha" aria-label="Filter members by initial"></nav>
+    <section class="grid" id="member-grid" aria-label="Member profiles"></section>
+    <div class="empty" id="empty">
+      <strong>No matching members</strong><br>
+      Try another name, role or organisation.
+    </div>
+    <p class="editorial-note">Professional themes are concise editorial summaries of public LinkedIn information and the details supplied for this directory. Members may request a correction below.</p>
+
+    <section class="update" aria-labelledby="update-title">
+      <div>
+        <p class="eyebrow">Keep your profile current</p>
+        <h2 id="update-title">Request an update or add your details.</h2>
+        <p>Email the TNTDPC CII CTO Forum team with your current professional details, a correction, or a request for a new listing. All changes can be reviewed before publication.</p>
+        <span class="status">Updates are reviewed before publication</span>
+      </div>
+      <button class="button" type="button" data-open-update>Email profile update</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span>TNTDPC CII CTO Forum · Member Directory 2026-27</span>
+      <span class="footer-credit">Designed and built in India by <a href="https://www.enwithai.com" target="_blank" rel="noopener noreferrer">EnWithAI</a> · CLEAR™ · <a href="https://www.crewpe.ai" target="_blank" rel="noopener noreferrer">CrewPE</a></span>
+    </div>
+  </footer>
+
+  <dialog id="update-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-body">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">Member input</p>
+          <h2 id="dialog-title">Update your profile</h2>
+        </div>
+        <button class="close" type="button" data-close-update aria-label="Close profile update instructions">×</button>
+      </div>
+      <p class="dialog-note">Send your request to <strong>lydia.graceline@cii.in</strong> with these details:</p>
+      <ol class="email-instructions">
+        <li>Full name</li>
+        <li>Current designation or role</li>
+        <li>Organisation</li>
+        <li>LinkedIn profile URL</li>
+        <li>The exact addition or correction requested</li>
+        <li>A replacement profile photograph attached, if required</li>
+      </ol>
+      <a class="button" id="email-update" href="#">Compose update email</a>
+    </div>
+  </dialog>
+
+  <noscript><div class="noscript">Please enable JavaScript to search and filter the member directory.</div></noscript>
+
+  <script id="members-data" type="application/json">[{"name": "Alagiri Govindasamy", "role": "CEO", "company": "PMCGS Private Limited", "linkedin": "https://www.linkedin.com/in/alagirig/", "initials": "AG", "letter": "A", "image": "alagiri-govindasamy.png", "attributes": ["Deep-tech healthcare", "AI simulation", "Industry 4.0"]}, {"name": "Anil Kalra", "role": "Executive Director", "company": "L&T Semiconductor Technologies", "linkedin": "https://www.linkedin.com/in/anilkkalra/", "initials": "AK", "letter": "A", "image": "anil-kalra.jpg", "attributes": ["Semiconductors", "Fabless ecosystems", "Board leadership"]}, {"name": "Anil Radhakrishnan", "role": "Chief Product Officer", "company": "Tata Elxsi", "linkedin": "https://www.linkedin.com/in/anil-radhakrishnan-potty/", "initials": "AR", "letter": "A", "image": "anil-radhakrishnan.jpg", "attributes": ["Product innovation", "Battery technology", "Energy storage"]}, {"name": "Anto Pradeep Fernando", "role": "IT Head", "company": "Pon Pure Chemicals", "linkedin": "https://www.linkedin.com/in/anto-cruz-pradeep-fernando-8501361b/", "initials": "AP", "letter": "A", "image": "anto-pradeep-fernando.jpg", "attributes": ["Enterprise IT", "IT operations", "Chemicals sector"]}, {"name": "Arun Moral J", "role": "Managing Director", "company": "Primus Partners", "linkedin": "https://www.linkedin.com/in/arun-moral-52a07a5/", "initials": "AM", "letter": "A", "image": "arun-moral-j.jpg", "attributes": ["Digital transformation", "AI & machine learning", "Cloud architecture"]}, {"name": "Ashish Ranjan Behera", "role": "AGM / Platform Head", "company": "Bonfiglioli Technology Space Pvt Ltd", "linkedin": "https://www.linkedin.com/in/ashish-ranjan-behera-8581146b/", "initials": "AR", "letter": "A", "image": "ashish-ranjan-behera.jpg", "attributes": ["Electric motors", "Platform leadership", "Automotive engineering"]}, {"name": "Ashok Sampath Kumar", "role": "Vice President", "company": "Barclays", "linkedin": "https://www.linkedin.com/in/ashok-sampath-kumar-acma-cia-cisa-0b8b137/", "initials": "AS", "letter": "A", "image": "", "attributes": ["Internal audit", "Risk assurance", "Financial services"]}, {"name": "Balasubramaniam M", "role": "CEO", "company": "Forbes Marshall Private Limited", "linkedin": "https://www.linkedin.com/in/balams03/", "initials": "BM", "letter": "B", "image": "balasubramaniam-m.jpg", "attributes": ["GCC leadership", "AI-first ventures", "Board governance"]}, {"name": "Chandramouli Vaidyanathan", "role": "Assistant Vice President - Product Owner, Technology Delivery", "company": "BA Continuum India Pvt. Ltd.", "linkedin": "https://www.linkedin.com/in/chandramouli-vaidyanathan/", "initials": "CV", "letter": "C", "image": "chandramouli-vaidyanathan.jpg", "attributes": ["Product ownership", "Technology delivery", "Financial services"]}, {"name": "Chandrasekar V R", "role": "CIO", "company": "EID PARRY (INDIA) LTD.", "linkedin": "https://www.linkedin.com/in/chandrasekaranganathan/?originalSubdomain=in", "initials": "CV", "letter": "C", "image": "chandrasekar-v-r.jpg", "attributes": ["Digital & AI transformation", "Industry 4.0", "AI governance"]}, {"name": "Dharmar", "role": "Senior Vice President", "company": "Rane Group", "linkedin": "https://www.linkedin.com/in/dharmar-thiruvanantha-perumal-76800a95/", "initials": "D", "letter": "D", "image": "dharmar.jpg", "attributes": ["R&D leadership", "Automotive engineering", "Product innovation"]}, {"name": "Durai Murugan", "role": "Consultant", "company": "Tata Consultancy Services", "linkedin": "https://www.linkedin.com/in/murugan47/", "initials": "DM", "letter": "D", "image": "durai-murugan.jpg", "attributes": ["Technology consulting", "AI & IoT", "Innovation leadership"]}, {"name": "Ganesh Kumar Raghupathy", "role": "Managing Partner", "company": "Shree Polymer Products", "linkedin": "https://www.linkedin.com/in/ganeshraghupathy/", "initials": "GK", "letter": "G", "image": "ganesh-kumar-raghupathy.jpg", "attributes": ["Entrepreneurship", "Investment", "Industrial products"]}, {"name": "Giridhar Krishna", "role": "Joint Managing Director", "company": "Cori Engineers Pvt Ltd", "linkedin": "https://www.linkedin.com/in/giridhar-krishna-062b2115/", "initials": "GK", "letter": "G", "image": "giridhar-krishna.jpg", "attributes": ["Executive leadership", "Industrial engineering", "Business operations"]}, {"name": "Gopi R", "role": "Group CEO", "company": "Shiftco", "linkedin": "https://www.linkedin.com/in/gopi-nair-a7603634/", "initials": "GR", "letter": "G", "image": "gopi-r.jpg", "attributes": ["Group leadership", "Entrepreneurship", "Technology ventures"]}, {"name": "Govind Kumar AM", "role": "Managing Director", "company": "SeaportAi", "linkedin": "https://www.linkedin.com/in/aigovindkumar/", "initials": "GK", "letter": "G", "image": "govind-kumar-am.jpg", "attributes": ["Generative AI", "Artificial intelligence", "Technology leadership"]}, {"name": "Hariharan Ramakrishnan", "role": "Managing Director & CEO", "company": "Brihan Enterprises Pvt Ltd", "linkedin": "https://www.linkedin.com/in/hariharanr/", "initials": "HR", "letter": "H", "image": "hariharan-ramakrishnan.jpg", "attributes": ["Business transformation", "Management consulting", "Executive leadership"]}, {"name": "Indranil Ghosh", "role": "Assistant Professor & Area Chairperson", "company": "Institute of Management Technology", "linkedin": "https://www.linkedin.com/in/indranil-ghosh-37628917/", "initials": "IG", "letter": "I", "image": "", "attributes": ["IT & analytics", "Management education", "Academic leadership"]}, {"name": "Jabez Selwyn", "role": "Senior Vice President", "company": "Redington Ltd", "linkedin": "https://www.linkedin.com/in/jabezselwyn/", "initials": "JS", "letter": "J", "image": "jabez-selwyn.jpg", "attributes": ["Technology distribution", "Enterprise leadership", "Business operations"]}, {"name": "Kadayam Seshadri Ganesan", "role": "Founder & MD", "company": "Genzeal Technology Service", "linkedin": "https://www.linkedin.com/in/ksganesan/", "initials": "KS", "letter": "K", "image": "kadayam-seshadri-ganesan.png", "attributes": ["Digital transformation", "Cloud & SaaS", "Industry 4.0"]}, {"name": "Karthik Varadharajan", "role": "Director - Digital Strategy &Innovation", "company": "Barclays", "linkedin": "https://www.linkedin.com/in/karthik-ia/", "initials": "KV", "letter": "K", "image": "", "attributes": ["Audit & risk", "Digital transformation", "AI strategy"]}, {"name": "Karthikeyan U", "role": "Chief Technology Officer", "company": "Mako IT Lab PVT Ltd", "linkedin": "https://www.linkedin.com/in/ukarthik/", "initials": "KU", "letter": "K", "image": "karthikeyan-u.jpg", "attributes": ["Technology leadership", "Entrepreneurship", "Software innovation"]}, {"name": "Koushik Ramani", "role": "Managing Partner", "company": "NetworkGain Consulting", "linkedin": "https://www.linkedin.com/in/rkoushik/", "initials": "KR", "letter": "K", "image": "koushik-ramani.jpg", "attributes": ["Business growth", "Decision advisory", "Technology alignment"]}, {"name": "Kumaran Mani", "role": "Chief Executive Officer", "company": "TenthPlanet Technologies Pvt Ltd", "linkedin": "https://www.linkedin.com/in/kumaranmani/", "initials": "KM", "letter": "K", "image": "kumaran-mani.png", "attributes": ["Open source", "Technology leadership", "Software services"]}, {"name": "Latha Chambrakalam", "role": "Founder and CEO", "company": "AutoAscend (OPC) Private Limited", "linkedin": "https://www.linkedin.com/in/latha-chembrakalam/", "initials": "LC", "letter": "L", "image": "latha-chambrakalam.jpg", "attributes": ["Automotive strategy", "Executive coaching", "GCC advisory"]}, {"name": "Madhava Venkatesh", "role": "CTO", "company": "TrusTrace", "linkedin": "https://www.linkedin.com/in/madhavavenkatesh/", "initials": "MV", "letter": "M", "image": "madhava-venkatesh.jpg", "attributes": ["Sustainability technology", "Product traceability", "Technology leadership"]}, {"name": "Madhusudan R", "role": "General Manager", "company": "IKN ENGINEERING INDIA PVT LTD", "linkedin": "https://www.linkedin.com/in/madhusudan-rasiraju-8880281b2/", "initials": "MR", "letter": "M", "image": "madhusudan-r.jpg", "attributes": ["Country leadership", "Industrial engineering", "Business operations"]}, {"name": "Mahesh Sriram", "role": "Principal Consultant and Managing Director", "company": "I - India Leadership and Innovation Services P Ltd", "linkedin": "https://www.linkedin.com/in/maheshsriram/", "initials": "MS", "letter": "M", "image": "mahesh-sriram.jpg", "attributes": ["Leadership development", "Innovation mentoring", "AI-enabled learning"]}, {"name": "Malolan", "role": "Managing Director", "company": "Indo Overseas Consultants P Ltd", "linkedin": "https://www.linkedin.com/in/malolan-parthasarathy/", "initials": "M", "letter": "M", "image": "malolan.png", "attributes": ["Supply chain", "Freight & logistics", "Customs brokerage"]}, {"name": "Manickam L K", "role": "Industry Advisor – Digital Engineering & Design to Manufacturing (D2M", "company": "Independent Consultant", "linkedin": "https://www.linkedin.com/in/manickam-loganathan-545b8482/", "initials": "ML", "letter": "M", "image": "manickam-l-k.jpg", "attributes": ["Digital engineering", "Advanced manufacturing", "Additive manufacturing"]}, {"name": "Meenakshi Sundaram", "role": "Vice President", "company": "JK Fenner", "linkedin": "https://www.linkedin.com/in/meenakshi-sundaram-cto/", "initials": "MS", "letter": "M", "image": "", "attributes": ["Technology leadership", "Enterprise strategy", "Industrial technology"]}, {"name": "Meera Venugopal", "role": "Partner", "company": "Krishna & Saurastri Associates LLP", "linkedin": "https://www.linkedin.com/in/meera-venugopal-bb70b24/", "initials": "MV", "letter": "M", "image": "meera-venugopal.jpg", "attributes": ["Patent law", "Intellectual property", "Legal advisory"]}, {"name": "Muthu Kumar", "role": "Evangelist", "company": "EveryOps.ai", "linkedin": "https://www.linkedin.com/in/muthukumar-singaram-b953942a/", "initials": "MK", "letter": "M", "image": "", "attributes": []}, {"name": "Nalini Kannan", "role": "Member", "company": "IBM", "linkedin": "https://www.linkedin.com/in/nalinipublicresume/", "initials": "NK", "letter": "N", "image": "nalini-kannan.jpg", "attributes": ["Enterprise architecture", "Technical leadership", "Technology consulting"]}, {"name": "Pavithra Duraisamy", "role": "Director", "company": "Santhi Processing Unit Private Limited", "linkedin": "https://www.linkedin.com/in/pavithra-duraisamy-8960b2163/", "initials": "PD", "letter": "P", "image": "pavithra-duraisamy.jpg", "attributes": ["Digital transformation", "Textile manufacturing", "Innovation leadership"]}, {"name": "Praveen Kumar", "role": "Chief Architect for Sustainable Mobility & Energy Infrastructure Systems", "company": "Freelance", "linkedin": "https://www.linkedin.com/in/praveenk-zev/", "initials": "PK", "letter": "P", "image": "praveen-kumar.jpg", "attributes": ["Electric mobility", "SDV architecture", "Energy infrastructure"]}, {"name": "Premnath D", "role": "Senior General Manager", "company": "Albonair India", "linkedin": "https://www.linkedin.com/in/duraivelu-premnath-799a532a/?originalSubdomain=in", "initials": "PD", "letter": "P", "image": "premnath-d.png", "attributes": ["Sales leadership", "Aftermarket operations", "Commercial strategy"]}, {"name": "Capt. Raghu Achat", "role": "VP – IT", "company": "Thejo Engineering", "linkedin": "https://www.linkedin.com/in/raghuachat/", "initials": "CR", "letter": "R", "image": "raghu-achat.jpg", "attributes": ["Enterprise IT", "Digital transformation", "Manufacturing technology"]}, {"name": "Rajaram L N", "role": "CTO & Co-Founder", "company": "Kritilabs Technologies Pvt. Ltd.", "linkedin": "https://www.linkedin.com/in/lnrajaram/", "initials": "RL", "letter": "R", "image": "rajaram-l-n.jpg", "attributes": ["Connected platforms", "Physical-digital systems", "Technology entrepreneurship"]}, {"name": "Ramachandran Prebagar", "role": "Chief Revenue Officer - FSS and IMS Business", "company": "TVS Electronics Limited", "linkedin": "https://www.linkedin.com/in/ramprebagar/", "initials": "RP", "letter": "R", "image": "ramachandran-prebagar.jpg", "attributes": ["Revenue strategy", "P&L leadership", "Technology services"]}, {"name": "Sai Prabhu", "role": "Manager / Platform Lead", "company": "Bonfiglioli Technology Space Pvt Ltd", "linkedin": "https://www.linkedin.com/in/sai-prabhu-05060451/", "initials": "SP", "letter": "S", "image": "", "attributes": []}, {"name": "Santosh Gonsalves", "role": "Chief Executive Officer", "company": "Liradolf Information Technologies and Engineering Services Pvt. Ltd.", "linkedin": "https://www.linkedin.com/in/santosh-gonsalves/", "initials": "SG", "letter": "S", "image": "santosh-gonsalves.jpg", "attributes": ["Industry 4.0", "Digital transformation", "Operational excellence"]}, {"name": "Saravanan N", "role": "Principal Engineer", "company": "Mahindra and Mahindra", "linkedin": "https://www.linkedin.com/in/dr-saravanan-n-238a1430/", "initials": "SN", "letter": "S", "image": "saravanan-n.jpg", "attributes": ["Electric powertrain", "New product development", "Sustainable mobility"]}, {"name": "Sathiyamoorthy P", "role": "IT Head", "company": "Suguna Foods Private Limited", "linkedin": "https://www.linkedin.com/in/padmanabhan-sathiyamoorthy-368557a/", "initials": "SP", "letter": "S", "image": "sathiyamoorthy-p.jpg", "attributes": ["Enterprise IT", "ERP & CRM", "IT infrastructure"]}, {"name": "Sathyapriya Balakrishnan", "role": "Managing Director", "company": "ZAHORANSKY Moulds and Machines Pvt Ltd", "linkedin": "https://www.linkedin.com/in/sathya-priya-balakrishnan-59b17586/", "initials": "SB", "letter": "S", "image": "sathyapriya-balakrishnan.jpg", "attributes": ["Executive leadership", "Industrial manufacturing", "Business operations"]}, {"name": "Senthilkumar Ramalingam", "role": "Head IT Infra", "company": "Pon Pure Chemicals", "linkedin": "https://www.linkedin.com/in/senthilkumar-r-69a64719a/", "initials": "SR", "letter": "S", "image": "senthilkumar-ramalingam.png", "attributes": ["IT infrastructure", "Cybersecurity leadership", "Enterprise technology"]}, {"name": "Shobhana Ravi P", "role": "President – Infotech, Innovation & Learning", "company": "Tractors and Farm Equipment Ltd", "linkedin": "https://www.linkedin.com/in/shobhana-p-ravi-b1350418/?originalSubdomain=in", "initials": "SR", "letter": "S", "image": "shobhana-ravi-p.jpg", "attributes": ["Digital transformation", "Information security", "Innovation leadership"]}, {"name": "Shridhar Navalgund", "role": "Director – Sales APAC", "company": "Lambda Test", "linkedin": "https://www.linkedin.com/in/shridharn/", "initials": "SN", "letter": "S", "image": "shridhar-navalgund.png", "attributes": ["APAC sales", "SaaS platforms", "Agentic AI"]}, {"name": "Srinivasa Prasad M N", "role": "Director - SDV", "company": "Accenture", "linkedin": "https://www.linkedin.com/in/srinivasa-prasad-m-n-49720821/", "initials": "SP", "letter": "S", "image": "srinivasa-prasad-m-n.jpg", "attributes": ["SDV architecture", "AI-driven mobility", "Automotive transformation"]}, {"name": "Srinivasan A N", "role": "Senior Vice President – IT", "company": "SRF Ltd", "linkedin": "https://www.linkedin.com/in/a-n-srinivasan-46a17215/", "initials": "SA", "letter": "S", "image": "srinivasan-a-n.png", "attributes": ["Enterprise IT", "Oracle services", "Technology leadership"]}, {"name": "Sripriya Venkataraman", "role": "Site Head – Director, Delivery & Operations", "company": "Mouri Tech", "linkedin": "https://www.linkedin.com/in/sripriya-venkataraman/?originalSubdomain=in", "initials": "SV", "letter": "S", "image": "sripriya-venkataraman.png", "attributes": ["Delivery operations", "Technology services", "Growth leadership"]}, {"name": "Subathra Mylsamy", "role": "Managing Partner", "company": "AK Mylsamy & Associates", "linkedin": "https://www.linkedin.com/in/subathra-mylsamy-012657113/", "initials": "SM", "letter": "S", "image": "subathra-mylsamy.jpg", "attributes": ["AI governance", "Privacy & cybersecurity", "Technology law"]}, {"name": "Sunil David", "role": "Digital Technology Consultant Ex- Regional Director – IOT, AT&T India", "company": "Independent", "linkedin": "https://www.linkedin.com/in/sunil-david-8165971/?originalSubdomain=in", "initials": "SD", "letter": "S", "image": "sunil-david.png", "attributes": ["IoT strategy", "Digital technology", "AI ecosystem"]}, {"name": "Thirumalai N C", "role": "Principal Research Scientist", "company": "Centre for Study of Science, Technology and Policy", "linkedin": "https://www.linkedin.com/in/ncthirumalai/", "initials": "TN", "letter": "T", "image": "", "attributes": ["Strategic studies", "Technology policy", "Research leadership"]}, {"name": "Uwe Georg Fischer", "role": "Managing Director", "company": "ZAHORANSKY Moulds and Machines Pvt Ltd", "linkedin": "https://www.linkedin.com/in/uwe-georg-fischer-0a980059/", "initials": "UG", "letter": "U", "image": "uwe-georg-fischer.jpg", "attributes": ["Executive leadership", "Industrial manufacturing", "Moulds & machinery"]}, {"name": "Venugopal Shankar", "role": "VP- Technology Innovation, MTA", "company": "Mahindra and Mahindra", "linkedin": "https://www.linkedin.com/in/shankarvenugopal/", "initials": "VS", "letter": "V", "image": "venugopal-shankar.jpg", "attributes": ["Technology innovation", "Automotive R&D", "Mobility engineering"]}, {"name": "Vijayalayan R", "role": "Senior Manager, Application Engineering – Auto Industry & Location Field Teams", "company": "MathWorks India Pvt Ltd", "linkedin": "https://www.linkedin.com/in/vijayalayanr/", "initials": "VR", "letter": "V", "image": "vijayalayan-r.jpg", "attributes": ["Application engineering", "Automotive systems", "Engineering software"]}]</script>
+  <script>
+    const UPDATE_EMAIL = "lydia.graceline@cii.in";
+    const members = JSON.parse(document.getElementById("members-data").textContent);
+    const grid = document.getElementById("member-grid");
+    const alpha = document.getElementById("alpha");
+    const search = document.getElementById("search");
+    const count = document.getElementById("count");
+    const empty = document.getElementById("empty");
+    let activeLetter = "ALL";
+
+    const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[char]);
+    const externalIcon = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="m10 14 11-11"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+    const portraitTemplate = member => member.image
+      ? `<div class="avatar"><img src="${escapeHtml(member.image)}" alt="Portrait of ${escapeHtml(member.name)}" loading="lazy" decoding="async"><span class="avatar-fallback" hidden aria-hidden="true">${escapeHtml(member.initials)}</span></div>`
+      : `<div class="avatar" aria-hidden="true"><span class="avatar-fallback">${escapeHtml(member.initials)}</span></div>`;
+    const cardTemplate = member => `
+      <article class="card" data-spotlight>
+        <div class="card-top">
+          <h3>${escapeHtml(member.name)}</h3>
+          ${portraitTemplate(member)}
+        </div>
+        <p class="role">${escapeHtml(member.role)}</p>
+        <p class="company">${escapeHtml(member.company)}</p>
+        <div class="attributes" aria-label="Professional themes">${member.attributes.map(attribute => `<span class="attribute">${escapeHtml(attribute)}</span>`).join("")}</div>
+        <a class="linkedin" href="${escapeHtml(member.linkedin)}" target="_blank" rel="noopener noreferrer" aria-label="View ${escapeHtml(member.name)} on LinkedIn">LinkedIn ${externalIcon}</a>
+      </article>`;
+
+    function render() {
+      const query = search.value.trim().toLocaleLowerCase();
+      const visible = members.filter(member => {
+        const matchesLetter = activeLetter === "ALL" || member.letter === activeLetter;
+        const haystack = `${member.name} ${member.role} ${member.company} ${member.attributes.join(" ")}`.toLocaleLowerCase();
+        return matchesLetter && (!query || haystack.includes(query));
+      });
+      grid.innerHTML = visible.map(cardTemplate).join("");
+      grid.querySelectorAll(".avatar img").forEach(image => image.addEventListener("error", () => {
+        image.hidden = true;
+        image.nextElementSibling.hidden = false;
+      }, { once: true }));
+      count.textContent = `${visible.length} ${visible.length === 1 ? "member" : "members"}${visible.length !== members.length ? ` shown · ${members.length} total` : ""}`;
+      empty.style.display = visible.length ? "none" : "block";
+    }
+
+    const available = new Set(members.map(member => member.letter));
+    ["ALL", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].forEach(letter => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = letter === "ALL" ? "All" : letter;
+      button.className = letter === "ALL" ? "all" : "";
+      button.disabled = letter !== "ALL" && !available.has(letter);
+      button.setAttribute("aria-pressed", String(letter === activeLetter));
+      button.addEventListener("click", () => {
+        activeLetter = letter;
+        alpha.querySelectorAll("button").forEach(item => item.setAttribute("aria-pressed", "false"));
+        button.setAttribute("aria-pressed", "true");
+        render();
+      });
+      alpha.appendChild(button);
+    });
+    search.addEventListener("input", render);
+    grid.addEventListener("pointermove", event => {
+      const card = event.target.closest("[data-spotlight]");
+      if (!card || event.pointerType === "touch") return;
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
+      card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
+    });
+    render();
+
+    const dialog = document.getElementById("update-dialog");
+    const emailSubject = "TNTDPC CII CTO Forum member profile update — [Full name]";
+    const emailBody = `Full name:\n\nCurrent designation / role:\n\nOrganisation:\n\nLinkedIn profile URL:\n\nExact addition or correction requested:\n\nReplacement photograph: Please attach if required.\n`;
+    document.getElementById("email-update").href = `mailto:${UPDATE_EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    document.querySelectorAll("[data-open-update]").forEach(button => button.addEventListener("click", () => dialog.showModal()));
+    document.querySelector("[data-close-update]").addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+  </script>
+</body>
+</html>
