@@ -9,6 +9,7 @@ The mark represents an open human centre surrounded by three connected signals: 
 - `cto-forum-mark.svg` — compact mark for avatars, favicons, and small placements.
 - `cto-forum-member-badge.svg` — member badge for the 2026–27 cohort.
 - `cto-forum-member-badge.png` — 1024 × 1024 px member-ready raster badge.
+- `cto-forum-community-banner.png` — 2048 × 508 px member-directory banner featuring photographs from CTO Forum sessions.
 
 ## Usage
 

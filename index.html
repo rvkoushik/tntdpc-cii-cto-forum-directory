@@ -31,6 +31,7 @@
     a { color: inherit; }
     .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .7rem 1rem; background: var(--ink); color: white; border-radius: 6px; }
     .skip-link:focus { top: 1rem; }
+    .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
     .shell { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
     header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); backdrop-filter: blur(18px); }
     .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -42,16 +43,23 @@
     .button:hover { background: #25313a; }
     .ghost { background: white; color: var(--ink); border-color: var(--line); }
     .ghost:hover { border-color: #cbd1d5; background: var(--soft); }
-    .hero { border-bottom: 1px solid var(--line); background: radial-gradient(circle at 12% 10%, rgba(88,185,222,.12), transparent 28%), radial-gradient(circle at 92% 30%, rgba(209,165,55,.10), transparent 26%), #fbfcfa; }
-    .hero-inner { min-height: 380px; padding: 5rem 0 4.5rem; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 4rem; align-items: end; }
+    .hero { border-bottom: 1px solid #1d3047; background: #0e1e34; }
+    .hero-inner { padding: 1.35rem 0; }
+    .forum-banner { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 24px 60px rgba(3, 12, 24, .34); }
     .eyebrow { margin: 0 0 .8rem; color: var(--blue); font-size: .8rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
     h1, h2, h3 { font-family: var(--font); }
     h1 { max-width: 780px; margin: 0; font-size: clamp(2.75rem, 6vw, 5rem); line-height: .99; letter-spacing: -.045em; font-weight: 500; }
     .intro { max-width: 720px; margin: 1.8rem 0 0; color: #3f4951; font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
-    .hero-note { border-left: 1px solid #dfe3e2; padding-left: 1.6rem; color: var(--muted); }
-    .member-emblem { display: block; width: 144px; height: 144px; margin-bottom: 1.35rem; border-radius: 32px; box-shadow: 0 18px 42px rgba(16,24,32,.15); }
-    .hero-note strong { display: block; margin-bottom: .8rem; color: var(--ink); font-size: 1.05rem; }
-    .hero-note span { display: block; margin-top: .55rem; }
+    .community { margin-top: 2rem; padding: 1.7rem 1.8rem; border: 1px solid #dbe4e9; border-radius: 12px; background: linear-gradient(120deg, #f3f8fb, #fffaf0); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; box-shadow: 0 16px 45px rgba(16,24,32,.06); }
+    .community-main { display: flex; align-items: flex-start; gap: 1.15rem; }
+    .linkedin-mark { width: 48px; height: 48px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 9px; color: white; background: #0a66c2; font-family: Arial, sans-serif; font-size: 1.45rem; font-weight: 800; letter-spacing: -.06em; }
+    .community h2 { margin: 0; font-size: clamp(1.45rem, 2.5vw, 2.15rem); letter-spacing: -.025em; }
+    .community p { max-width: 720px; margin: .55rem 0 1rem; color: var(--muted); }
+    .community .button { background: #0a66c2; border-color: #0a66c2; }
+    .community .button:hover { background: #084f96; }
+    .member-identity { display: flex; align-items: center; gap: 1rem; padding-left: 1.5rem; border-left: 1px solid #d4dde1; color: var(--muted); font-size: .82rem; }
+    .member-emblem { display: block; width: 82px; height: 82px; flex: 0 0 auto; border-radius: 18px; box-shadow: 0 12px 28px rgba(16,24,32,.15); }
+    .member-identity strong { display: block; color: var(--ink); font-size: .92rem; }
     .badge-downloads { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
     .badge-download { display: inline-flex; color: var(--blue); font-size: .82rem; font-weight: 800; text-decoration: none; }
     .badge-download:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -108,8 +116,8 @@
     .dialog-note { color: var(--muted); }
     .noscript { margin: 1rem auto; padding: 1rem; width: min(1180px, calc(100% - 3rem)); background: #fff3cd; border: 1px solid #ead48a; }
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-note { max-width: 520px; }
+      .community { grid-template-columns: 1fr; }
+      .member-identity { padding: 1.25rem 0 0; border-left: 0; border-top: 1px solid #d4dde1; }
       .directory-head { grid-template-columns: 1fr; }
       .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
@@ -118,7 +126,12 @@
       .nav { min-height: 64px; }
       .brand-logo { width: 194px; }
       .nav-actions .ghost { display: none; }
-      .hero-inner { min-height: 0; padding: 3.5rem 0; }
+      .hero-inner { padding: .75rem 0; }
+      .forum-banner { aspect-ratio: 16 / 9; object-fit: cover; object-position: left center; border-radius: 8px; }
+      .community { margin-top: 1rem; padding: 1.35rem; }
+      .community-main { display: block; }
+      .linkedin-mark { margin-bottom: 1rem; }
+      .community .button { width: 100%; }
       h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
       main { padding-top: 2.5rem; }
       .grid { grid-template-columns: 1fr; }
@@ -144,15 +157,26 @@
     </div>
   </header>
 
-  <section class="hero" id="top">
+  <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="shell hero-inner">
+      <h1 class="visually-hidden" id="hero-title">TNTDPC CII CTO Forum Member Directory 2026-27</h1>
+      <img class="forum-banner" src="assets/cto-forum-community-banner.png" width="2048" height="508" fetchpriority="high" alt="TNTDPC CII CTO Forum Member Directory 2026-27 — shaping India's technology and industrial leadership, with photographs from CTO Forum meetings.">
+    </div>
+  </section>
+
+  <section class="shell community" aria-labelledby="community-title">
+    <div class="community-main">
+      <span class="linkedin-mark" aria-hidden="true">in</span>
       <div>
-        <p class="eyebrow">TNTDPC CII CTO Forum</p>
-        <h1>Meet the people shaping the forum.</h1>
-        <p class="intro">An alphabetical directory of technology leaders, business builders, advisors and practitioners across the TNTDPC CII CTO Forum community.</p>
+        <p class="eyebrow">Member community</p>
+        <h2 id="community-title">Continue the conversation on LinkedIn.</h2>
+        <p>CTO Forum members can join the private LinkedIn Group to stay connected, exchange perspectives and continue conversations beyond forum sessions.</p>
+        <a class="button" href="https://www.linkedin.com/groups/10392276/" target="_blank" rel="noopener noreferrer">Join the CTO Forum LinkedIn Group ↗</a>
       </div>
-      <div class="hero-note" aria-label="CTO Forum member identity">
-        <img class="member-emblem" src="assets/cto-forum-member-badge.svg" alt="TNTDPC CII CTO Forum Member 2026-27 badge">
+    </div>
+    <div class="member-identity" aria-label="CTO Forum member identity">
+      <img class="member-emblem" src="assets/cto-forum-member-badge.svg" alt="TNTDPC CII CTO Forum Member 2026-27 badge">
+      <div>
         <strong>A mark of collective intelligence.</strong>
         <span>Technology · Leadership · Community</span>
         <span class="badge-downloads">
