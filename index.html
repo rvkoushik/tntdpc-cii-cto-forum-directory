@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101820'/%3E%3Ccircle cx='22' cy='32' r='9' fill='none' stroke='%2358b9de' stroke-width='5'/%3E%3Ccircle cx='42' cy='32' r='9' fill='none' stroke='%23d1a537' stroke-width='5'/%3E%3Cpath d='M29 32h6' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/cto-forum-mark.svg">
   <style>
     :root {
       --ink: #101820;
@@ -34,10 +34,8 @@
     .shell { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
     header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); backdrop-filter: blur(18px); }
     .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font-family: var(--font); font-weight: 700; letter-spacing: .01em; }
-    .brand-mark { display: inline-flex; align-items: center; gap: .15rem; }
-    .brand-mark i { width: .72rem; height: .72rem; border: 2px solid var(--blue); border-radius: 50%; display: block; }
-    .brand-mark i:last-child { border-color: var(--gold); }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-logo { display: block; width: 236px; height: auto; }
     .nav-actions { display: flex; gap: .55rem; align-items: center; }
     .button, .ghost { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: .45rem; padding: .65rem 1rem; border-radius: 7px; text-decoration: none; font-weight: 700; border: 1px solid var(--ink); cursor: pointer; }
     .button { background: var(--ink); color: white; }
@@ -51,8 +49,12 @@
     h1 { max-width: 780px; margin: 0; font-size: clamp(2.75rem, 6vw, 5rem); line-height: .99; letter-spacing: -.045em; font-weight: 500; }
     .intro { max-width: 720px; margin: 1.8rem 0 0; color: #3f4951; font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
     .hero-note { border-left: 1px solid #dfe3e2; padding-left: 1.6rem; color: var(--muted); }
+    .member-emblem { display: block; width: 144px; height: 144px; margin-bottom: 1.35rem; border-radius: 32px; box-shadow: 0 18px 42px rgba(16,24,32,.15); }
     .hero-note strong { display: block; margin-bottom: .8rem; color: var(--ink); font-size: 1.05rem; }
     .hero-note span { display: block; margin-top: .55rem; }
+    .badge-downloads { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+    .badge-download { display: inline-flex; color: var(--blue); font-size: .82rem; font-weight: 800; text-decoration: none; }
+    .badge-download:hover { text-decoration: underline; text-underline-offset: 4px; }
     main { padding: 3.5rem 0 5rem; }
     .directory-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px, 380px); gap: 2rem; align-items: end; }
     h2 { margin: .15rem 0 0; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; }
@@ -114,7 +116,7 @@
     @media (max-width: 620px) {
       .shell { width: min(100% - 1.5rem, 1180px); }
       .nav { min-height: 64px; }
-      .brand-sub { display: none; }
+      .brand-logo { width: 194px; }
       .nav-actions .ghost { display: none; }
       .hero-inner { min-height: 0; padding: 3.5rem 0; }
       h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
@@ -133,8 +135,7 @@
   <header>
     <div class="shell nav">
       <a class="brand" href="#top" aria-label="TNTDPC CII CTO Forum member directory home">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
-        <span>TNTDPC CII CTO Forum <span class="brand-sub">· Member Directory 2026-27</span></span>
+        <img class="brand-logo" src="assets/cto-forum-wordmark.svg" alt="TNTDPC CII CTO Forum">
       </a>
       <nav class="nav-actions" aria-label="Primary">
         <a class="ghost" href="#directory">Members</a>
@@ -150,11 +151,14 @@
         <h1>Meet the people shaping the forum.</h1>
         <p class="intro">An alphabetical directory of technology leaders, business builders, advisors and practitioners across the TNTDPC CII CTO Forum community.</p>
       </div>
-      <div class="hero-note" aria-label="Directory principles">
-        <strong>Member directory</strong>
-        <span>Alphabetically indexed</span>
-        <span>Professionally focused</span>
-        <span>Connected through LinkedIn</span>
+      <div class="hero-note" aria-label="CTO Forum member identity">
+        <img class="member-emblem" src="assets/cto-forum-member-badge.svg" alt="TNTDPC CII CTO Forum Member 2026-27 badge">
+        <strong>A mark of collective intelligence.</strong>
+        <span>Technology · Leadership · Community</span>
+        <span class="badge-downloads">
+          <a class="badge-download" href="assets/cto-forum-member-badge.png" download>Badge PNG ↓</a>
+          <a class="badge-download" href="assets/cto-forum-member-badge.svg" download>Badge SVG ↓</a>
+        </span>
       </div>
     </div>
   </section>

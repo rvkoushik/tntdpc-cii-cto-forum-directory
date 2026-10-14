@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 132" role="img" aria-labelledby="title desc">
+  <title id="title">TNTDPC CII CTO Forum</title>
+  <desc id="desc">CTO Forum wordmark with a collective intelligence orbit symbol.</desc>
+  <g transform="translate(6 6)">
+    <rect width="120" height="120" rx="29" fill="#101820"/>
+    <circle cx="60" cy="60" r="24" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-dasharray="108 43" transform="rotate(-44 60 60)"/>
+    <path d="M60 20v16M95 79l-14-8M25 79l14-8" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="60" cy="17" r="7.5" fill="#58b9de"/>
+    <circle cx="99" cy="82" r="7.5" fill="#d1a537"/>
+    <circle cx="21" cy="82" r="7.5" fill="#58b9de"/>
+    <circle cx="60" cy="60" r="6.5" fill="#d1a537"/>
+  </g>
+  <g fill="#101820" font-family="Comfortaa, Arial Rounded MT Bold, Trebuchet MS, sans-serif">
+    <text x="154" y="69" font-size="50" font-weight="700" letter-spacing="2">CTO FORUM</text>
+    <text x="157" y="102" font-size="18" font-weight="600" letter-spacing="5" fill="#52606a">TNTDPC · CII</text>
+  </g>
+</svg>

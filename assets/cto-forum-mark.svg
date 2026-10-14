@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">CTO Forum collective intelligence mark</title>
+  <desc id="desc">Three connected signals orbit an open human centre.</desc>
+  <rect width="128" height="128" rx="30" fill="#101820"/>
+  <circle cx="64" cy="64" r="25" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-dasharray="112 45" transform="rotate(-44 64 64)"/>
+  <path d="M64 22v17M101 84 86 75M27 84l15-9" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="64" cy="18" r="8" fill="#58b9de"/>
+  <circle cx="105" cy="87" r="8" fill="#d1a537"/>
+  <circle cx="23" cy="87" r="8" fill="#58b9de"/>
+  <circle cx="64" cy="64" r="7" fill="#d1a537"/>
+</svg>
